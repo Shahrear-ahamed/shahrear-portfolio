@@ -11,7 +11,7 @@ const Navbar = () => {
       <li className="py-3 text-2xl md:py-0 md:text-base">Home</li>
       <li className="py-3 text-2xl md:py-0 md:text-base">About</li>
       <li className="py-3 text-2xl md:py-0 md:text-base">Skills</li>
-      <li className="py-3 text-2xl md:py-0 md:text-base">Work</li>
+      <li className="py-3 text-2xl md:py-0 md:text-base">Works</li>
       <li className="py-3 text-2xl md:py-0 md:text-base">Contact us</li>
     </>
   );
