@@ -9,7 +9,7 @@
   }
 }
 
-.content-div {
+.content-div,.comingSoon-div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

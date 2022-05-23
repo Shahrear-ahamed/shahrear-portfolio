@@ -8,7 +8,10 @@ const Skills = () => {
       .then((data) => setSkillsData(data));
   }, []);
   return (
-    <div name="skills" className="w-full bg-[#0a192f] text-gray-300">
+    <div
+      name="skills"
+      className="w-full min-h-screen h-full flex items-center md:pt-[80px] bg-[#0a192f] text-gray-300"
+    >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>

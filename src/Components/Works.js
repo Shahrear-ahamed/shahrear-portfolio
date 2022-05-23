@@ -1,9 +1,19 @@
-import React from "react";
-import Work from './Work';
+import React, { useEffect, useState } from "react";
+import Work from "./Work";
 
 const Works = () => {
+  const [works, setWorks] = useState([]);
+  useEffect(() => {
+    fetch("work.json")
+      .then((res) => res.json())
+      .then((data) => setWorks(data));
+  }, []);
+
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div
+      name="works"
+      className="w-full max-h-screen h-full md:pt-[80px] text-gray-300 bg-[#0a192f]"
+    >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
@@ -15,7 +25,14 @@ const Works = () => {
         {/* Container */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Grid Item */}
-          <Work />
+          {works.map((work) => (
+            <Work key={work.id} work={work} />
+          ))}
+          <div
+            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto comingSoon-div bg-slate-500"
+          >
+            <h2 className="text-3xl text-white">Coming Soon</h2>
+          </div>
         </div>
       </div>
     </div>
