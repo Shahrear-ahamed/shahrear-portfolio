@@ -12,7 +12,7 @@ const Works = () => {
   return (
     <div
       name="works"
-      className="w-full min-h-screen h-full md:py-[80px] text-gray-300 bg-dark"
+      className="w-full min-h-screen h-full pt-[80px] text-gray-300 bg-dark"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
