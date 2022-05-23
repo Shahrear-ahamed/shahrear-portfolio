@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import Work from "./Components/Works";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Skills />
       <Work />
       <Contact />
+      <Footer />
       <ToastContainer />
     </>
   );

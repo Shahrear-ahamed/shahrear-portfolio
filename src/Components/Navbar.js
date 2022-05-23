@@ -15,14 +15,13 @@ const Navbar = () => {
       <div className="flex items-center">
         <img src={darkLogo} alt="Site logo" className="w-[80px]" />
         <img src={darkName} alt="Site logo" className="w-[200px] ml-[-10px]" />
-        {/* <span className="ml-5 text-3xl font-bold">S. Ahamed</span> */}
       </div>
 
       {/* menu items are here */}
       <ul className="hidden md:flex">
         {menuItem.map((menu, index) => (
           <li key={index}>
-            <Link to={menu.toLocaleLowerCase()} smooth={true} duration={500}>
+            <Link className="hover:text-white hover:border-b-2 hover:border-b-white duration-500" to={menu.toLocaleLowerCase()} smooth={true} duration={500}>
               {menu}
             </Link>
           </li>

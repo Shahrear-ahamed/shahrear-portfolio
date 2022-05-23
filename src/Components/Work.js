@@ -14,18 +14,18 @@ const Work = ({ work }) => {
             {name}
           </span>
           <div className="pt-8 text-center">
-            <a href={live} target="_blank">
+            <a href={live} target="blank">
               <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                 Live
               </button>
             </a>
-            <a href={client} target="_blank">
+            <a href={client} target="blank">
               <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                 Client
               </button>
             </a>
             {server && (
-              <a href={server} target="_blank">
+              <a href={server} target="blank">
                 <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                   Server
                 </button>
