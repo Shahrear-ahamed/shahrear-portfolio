@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import Work from "./Components/Works";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (

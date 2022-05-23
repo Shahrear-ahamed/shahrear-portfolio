@@ -3,19 +3,20 @@ import React from "react";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  const handleContact = (event) => {
-    event.preventDefault();
+  const handleContact = (e) => {
+    e.preventDefault();
 
     emailjs
       .sendForm(
         "service_1aornf4",
         "template_ixjeioa",
-        event.target,
+        e.target,
         "bWyPMreeJIIGyws0Z"
       )
       .then((res) => {
-        if (res.text === "OK") {
+        if (res.status === 200) {
           toast.success("Received your mail, I'll reply you later");
+          e.target.reset();
         }
       })
       .catch((err) => {
