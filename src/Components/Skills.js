@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="w-full min-h-screen h-full flex items-center md:pt-[80px] bg-[#0a192f] text-gray-300"
+      className="w-full min-h-screen h-full flex items-center bg-dark text-gray-300"
     >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -25,9 +25,13 @@ const Skills = () => {
           {skillsData.map((skill) => (
             <div
               key={skill.id}
-              className="shadow-md shadow-[#040c16] rounded-md hover:scale-110 duration-500"
+              className="shadow-md shadow-dark rounded-md hover:scale-110 duration-500"
             >
-              <img className="w-16 mx-auto" src={skill.img} alt="HTML icon" />
+              <img
+                className="w-16 pt-4 mx-auto"
+                src={skill.img}
+                alt="HTML icon"
+              />
               <p className="my-4">{skill.name}</p>
             </div>
           ))}

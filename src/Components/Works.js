@@ -12,7 +12,7 @@ const Works = () => {
   return (
     <div
       name="works"
-      className="w-full max-h-screen h-full md:pt-[80px] text-gray-300 bg-[#0a192f]"
+      className="w-full min-h-screen h-full md:py-[80px] text-gray-300 bg-dark"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -29,7 +29,7 @@ const Works = () => {
             <Work key={work.id} work={work} />
           ))}
           <div
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto comingSoon-div bg-slate-500"
+            className="shadow-lg shadow-dark group container rounded-md flex justify-center items-center mx-auto comingSoon-div bg-slate-500"
           >
             <h2 className="text-3xl text-white">Coming Soon</h2>
           </div>

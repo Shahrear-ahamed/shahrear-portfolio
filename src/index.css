@@ -9,7 +9,14 @@
   }
 }
 
-.content-div,.comingSoon-div {
+.bg-dark {
+  background-color: #0a192f;
+}
+.shadow-dark {
+  @apply shadow-[#040c16];
+}
+.content-div,
+.comingSoon-div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,6 +25,7 @@
 .content-div:hover {
   background-image: linear-gradient(
     to right,
-    rgba(112, 157, 255, 0.5) ,hsla(242, 74%, 62%, 0.5)
-  )!important;
+    rgba(112, 157, 255, 0.5),
+    hsla(242, 74%, 62%, 0.5)
+  ) !important;
 }

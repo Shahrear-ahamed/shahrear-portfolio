@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 import darkLogo from "../assets/dark-logo.png";
 import darkName from "../assets/name-dark.png";
-import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   // menu items are here
   const menuItem = ["Home", "About", "Skills", "Works", "Contact"];
-  
+
   return (
-    <div className="z-50 sticky top-0 w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 md:px-9 lg:px-10">
+    <div className="z-50 sticky top-0 w-full h-[80px] flex justify-between items-center px-4 bg-dark shadow-lg text-gray-300 md:px-9 lg:px-10">
       <div className="flex items-center">
         <img src={darkLogo} alt="Site logo" className="w-[80px]" />
         <img src={darkName} alt="Site logo" className="w-[200px] ml-[-10px]" />
@@ -39,12 +39,24 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-dark flex flex-col justify-center items-center"
         }
       >
-        <ul className="hidden md:flex">
-          {menuItem.map((menu, index) => (
+        <ul className="flex flex-col space-y-10 text-2xl font-semibold items-center md:hidden">
+          {/* {menuItem.map((menu, index) => (
             <li key={index}>{menu}</li>
+          ))} */}
+          {menuItem.map((menu, index) => (
+            <li key={index}>
+              <Link
+                onClick={() => setNav(!nav)}
+                to={menu.toLocaleLowerCase()}
+                smooth={true}
+                duration={500}
+              >
+                {menu}
+              </Link>
+            </li>
           ))}
         </ul>
       </ul>
