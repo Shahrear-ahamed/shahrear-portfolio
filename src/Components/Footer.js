@@ -21,7 +21,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/shahrear-ahamed-b0376623b/"
+                href="https://www.linkedin.com/in/shahrear-ahamed/"
                 target="blank"
               >
                 <BsLinkedin />
